@@ -17,15 +17,14 @@
 # limitations under the License.
 #
 
-yum_key "x2go.key" do
-  url "http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/RHEL_6/repodata/repomd.xml.key"
+yum_key 'x2go.key' do
+  url 'http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/RHEL_6/repodata/repomd.xml.key'
   action :add
 end
 
-
-yum_repository "x2go" do
-  repo_name "x2go"
-  description "x2go (replaces NX)"
-  url "http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/RHEL_6"
+yum_repository 'x2go' do
+  repo_name 'x2go'
+  description 'x2go (replaces NX)'
+  url 'http://download.opensuse.org/repositories/X11:/RemoteDesktop:/x2go/RHEL_6'
   action :add
 end

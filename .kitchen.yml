@@ -1,0 +1,16 @@
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: debian-8.6
+    run_list: apt::default
+
+suites:
+- name: default
+  run_list:
+    - recipe[x2go::default]
+    - recipe[x2go::server]
+    - recipe[x2go::client]

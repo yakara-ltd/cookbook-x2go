@@ -1,0 +1,13 @@
+DEPENDENCIES
+  x2go
+    path: .
+    metadata: true
+
+GRAPH
+  apt (5.0.0)
+    compat_resource (>= 12.14.7)
+  compat_resource (12.16.2)
+  x2go (0.1.1)
+    apt (>= 0.0.0)
+    yum (>= 0.0.0)
+  yum (4.1.0)

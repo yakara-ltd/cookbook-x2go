@@ -7,10 +7,12 @@
   "license": "Apache 2.0",
   "platforms": {
     "centos": ">= 6.0",
-    "rhel": ">= 6.0"
+    "rhel": ">= 6.0",
+    "debian": ">= 8.0"
   },
   "dependencies": {
-    "yum": ">= 0.0.0"
+    "yum": ">= 0.0.0",
+    "apt": ">= 0.0.0"
   },
   "recommendations": {
   },
@@ -28,5 +30,5 @@
   },
   "recipes": {
   },
-  "version": "0.1.0"
+  "version": "0.1.1"
 }

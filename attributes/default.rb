@@ -21,8 +21,11 @@ default['x2go']['server']['svc'] = 'x2gocleansessions'
 default['x2go']['client']['pkg'] = 'x2goclient'
 
 case node['platform_family']
-when "centos","rhel"
-  if node['platform_version'] >='6.0'
+when 'centos', 'rhel'
+  if node['platform_version'] >= '6.0'
     default['x2go']['install_flavor'] = 'yum_repo'
   end
+when 'debian'
+  default['x2go']['install_flavor'] = 'apt_repo'
+  default['x2go']['server']['svc'] = 'x2goserver'
 end

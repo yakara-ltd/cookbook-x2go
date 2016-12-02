@@ -1,8 +1,7 @@
 #
 # Cookbook Name:: x2go
-# Recipe:: server
+# Recipe:: apt_repo
 #
-# Copyright 2013, Rilindo Foster
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -17,10 +16,9 @@
 # limitations under the License.
 #
 
-package node['x2go']['server']['pkg'] do
-  :install
-end
-
-service node['x2go']['server']['svc'] do
-  action [:enable, :start]
+apt_repository 'x2go' do
+  uri 'http://packages.x2go.org/debian'
+  distribution node['lsb']['codename']
+  components ['main']
+  key 'x2go.public.key'
 end
